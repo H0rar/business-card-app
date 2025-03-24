@@ -1,0 +1,10 @@
+.App{
+  @import "Header.scss";  
+  main{
+    display: flex;
+    
+    @import"Preview.scss";
+    @import"Form.scss";
+    
+  }
+}
