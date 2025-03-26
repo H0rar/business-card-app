@@ -21,12 +21,25 @@ const App = () => {
     Email,
     Phone
   };
+  const handleChange = e => {
+    const setField = {
+      setName,
+      setDesignation,
+      setCompany,
+      setAdress,
+      setCity,
+      setEmail,
+      setPhone
+      
+    };
+    setField["set" + e.target.name](e.target.value);
+  };
   return  (
     <div className="App">
       <Header Dark={true}>Professional Business Card Maker</Header>
       <main> 
-      <Form Values={Values}/>
-      <Preview  />
+        <Form Values={Values} onChange={handleChange} />
+        <Preview Values={Values} />
       </main>
     </div>
   );
